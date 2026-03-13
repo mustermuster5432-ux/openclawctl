@@ -53,49 +53,24 @@ function Show-Menu {
     $sel = 0
     $savedVisible = [Console]::CursorVisible
     [Console]::CursorVisible = $false
-    $w = [Console]::WindowWidth
-
-    $headerCount = 0
-    if ($Header) { $headerCount = 3 }
-    $totalLines = $headerCount + 1 + $Options.Count
-
-    for ($i = 0; $i -lt $totalLines; $i++) { [Console]::WriteLine('') }
-    $anchorY = [Console]::CursorTop - $totalLines
 
     try {
         while ($true) {
-            $row = $anchorY
+            Clear-Host
 
             if ($Header) {
-                [Console]::SetCursorPosition(0, $row)
-                [Console]::Write((' ' * ($w - 1)))
-                $row++
-                [Console]::SetCursorPosition(0, $row)
-                Write-Host ("  $Header".PadRight($w - 1)) -ForegroundColor DarkCyan
-                $row++
-                [Console]::SetCursorPosition(0, $row)
-                Write-Host ('  ↑↓ 移动 · Enter 确认 · q 退出'.PadRight($w - 1)) -ForegroundColor DarkGray
-                $row++
+                Write-Host ""
+                Write-Colored "  $Header" DarkCyan
+                Write-Colored "  ↑↓ 移动 · Enter 确认 · q 退出" DarkGray
+                Write-Host ""
             }
 
-            [Console]::SetCursorPosition(0, $row)
-            [Console]::Write((' ' * ($w - 1)))
-            $row++
-
             for ($i = 0; $i -lt $Options.Count; $i++) {
-                [Console]::SetCursorPosition(0, $row)
                 if ($i -eq $sel) {
-                    $txt = "  > $($Options[$i])"
-                    if ($txt.Length -ge $w) { $txt = $txt.Substring(0, $w - 1) }
-                    else { $txt = $txt.PadRight($w - 1) }
-                    Write-Host $txt -ForegroundColor Cyan
+                    Write-Host "  > $($Options[$i])" -ForegroundColor Cyan
                 } else {
-                    $txt = "    $($Options[$i])"
-                    if ($txt.Length -ge $w) { $txt = $txt.Substring(0, $w - 1) }
-                    else { $txt = $txt.PadRight($w - 1) }
-                    Write-Host $txt -ForegroundColor Gray
+                    Write-Host "    $($Options[$i])" -ForegroundColor Gray
                 }
-                $row++
             }
 
             $key = [Console]::ReadKey($true)
