@@ -393,7 +393,8 @@ api-keys:
     Push-Location $script:CLIProxyDir
     try {
         if ($loginCmd -eq '--login') {
-            "2" | & $script:CLIProxyBin $loginCmd 2>&1 | ForEach-Object { Write-Host $_ }
+            $geminiChoice = "2" + [Environment]::NewLine
+            $geminiChoice | & $script:CLIProxyBin $loginCmd 2>&1 | ForEach-Object { Write-Host $_ }
         } else {
             & $script:CLIProxyBin $loginCmd 2>&1 | ForEach-Object { Write-Host $_ }
         }
